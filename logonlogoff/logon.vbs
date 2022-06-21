@@ -31,5 +31,5 @@ set recordSet = CreateObject("ADODB.Recordset")
 connectionString = "Driver={MySQL ODBC 8.0 Unicode Driver};Server=localhost;" & _
     "Database=logonlogoff;User=root;Password=;"
 
-connection.Open connectionString
+connection.Open connectionString 
 recordSet.Open "INSERT INTO `logon` (`codigo`, `tipo`, `usuario`, `Computador`, `datahora`) VALUES (NULL, 'logon', '" & strUserName & "','" & strComputerName & "', '" & DateInfo & "');", connection
